@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from "react";
 import { Spinner, Nav , Carousel } from "react-bootstrap";
-import 'bootstrap/dist/css/bootstrap.min.css';
 import {useDispatch, useSelector} from "react-redux";
 import getData from "./reducers/actions";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 
@@ -23,7 +23,9 @@ function App() {
     if(!data.length){
         return (
             <>
-                    <Spinner animation="border" role="status" className="spinner"/>
+                <div className="spinner">
+                    <Spinner animation="border" role="status" />
+                </div>
             </>)
     }
 
